@@ -170,6 +170,7 @@ main {
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="{{ route('dashboard') }}"><i class="material-icons left">dashboard</i>Dashboard</a></li>
+           <li><a href="{{ route('usuarios.index') }}"><i class="material-icons left">add</i>Usuarios</a></li>
           <li><a href="{{ route('clientes.index') }}"><i class="material-icons left">people</i>Clientes</a></li>
           <li><a href="{{ route('procesos.index')}}"><i class="material-icons left">folder_open</i>Procesos</a></li>
           <li><a href="{{ route('cambios.index')}}"><i class="material-icons left">swap_horiz</i>Cambios</a></li>
@@ -184,6 +185,7 @@ main {
   <!-- MENÚ LATERAL MÓVIL -->
   <ul class="sidenav" id="mobile-menu">
     <li><a href="{{ route('dashboard') }}"><i class="material-icons">dashboard</i>Dashboard</a></li>
+    <li><a href="{{ route('usuarios.index') }}"><i class="material-icons left">add</i>Usuarios</a></li>
     <li><a href="{{ route('clientes.index') }}"><i class="material-icons">people</i>Clientes</a></li>
     <li><a href="{{route('procesos.index')}}"><i class="material-icons">folder_open</i>Procesos</a></li>
     <li><a href="{{ route('cambios.index')}}"><i class="material-icons">swap_horiz</i>Cambios</a></li>

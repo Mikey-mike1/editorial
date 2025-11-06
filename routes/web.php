@@ -8,6 +8,7 @@ use App\Http\Controllers\CambioController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\EditorController;
 use App\Http\Controllers\ConsultaController;
+use App\Http\Controllers\UserController;
 
 // --------------------------
 // RUTAS DE AUTENTICACIÓN
@@ -28,6 +29,19 @@ Route::middleware(['auth', 'admin'])->group(function () {
     // Procesos por cliente
     Route::get('/admin/clientes/{cliente}/procesos', [ProcesoController::class, 'procesosCliente'])
         ->name('clientes.procesos');
+
+// --------------------------
+// CRUD DE USUARIOS (ADMIN)
+// --------------------------
+Route::get('/admin/usuarios', [UserController::class, 'index'])->name('usuarios.index');
+Route::get('/admin/usuarios/create', [UserController::class, 'create'])->name('usuarios.create');
+Route::post('/admin/usuarios', [UserController::class, 'store'])->name('usuarios.store');
+Route::get('/admin/usuarios/{usuario}', [UserController::class, 'show'])->name('usuarios.show');
+Route::get('/admin/usuarios/{usuario}/edit', [UserController::class, 'edit'])->name('usuarios.edit');
+Route::put('/admin/usuarios/{usuario}', [UserController::class, 'update'])->name('usuarios.update');
+Route::delete('/admin/usuarios/{usuario}', [UserController::class, 'destroy'])->name('usuarios.destroy');
+
+
 
     // --------------------------
     // CRUD DE CLIENTES (ADMIN)
